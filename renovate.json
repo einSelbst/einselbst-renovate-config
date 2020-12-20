@@ -5,7 +5,7 @@
         ":separateMultipleMajorReleases",
         ":followTag(typescript, next)",
         ":automergeMinor",
-        ":automergeBranch"
+        ":automergeBranch",
         ":automergeRequireAllStatusChecks",
         ":automergeLinters",
         ":automergeTesters",
