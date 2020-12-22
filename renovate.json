@@ -14,27 +14,5 @@
         ":enableVulnerabilityAlertsWithLabel(security)",
         ":labels(dependencies,maintenance-bot)",
         ":bumpVersion(patch)"
-    ],
-    "packageRules": [
-        {
-            "extends": "packages:googleapis",
-            "groupName": "googleapis packages"
-        },
-        {
-            "extends": "packages:linters",
-            "groupName": "linters"
-        },
-        {
-            "packagePatterns": ["eslint"],
-            "labels": ["linting"]
-        },
-        {
-            "depTypeList": ["optionalDependencies"],
-            "addLabels": ["optional"]
-        }
-    ],
-    "lockFileMaintenance": {
-        "enabled": true,
-        "automerge": true
-    }
+    ]
 }
