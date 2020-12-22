@@ -8,7 +8,11 @@
         ":automergeRequireAllStatusChecks",
         ":automergeLinters",
         ":automergeTesters",
-        ":automergeTypes"
+        ":automergeTypes",
+        ":pinSkipCi",
+        ":enableVulnerabilityAlertsWithLabel(security)",
+        ":labels(dependencies,maintenance-bot)",
+        ":bumpVersion(patch)"
     ],
     "packageRules": [
         {
