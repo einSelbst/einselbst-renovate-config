@@ -1,6 +1,37 @@
 {
     "$schema": "https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/renovate.json",
     "extends": [
-        "config:js-app"
-    ]
+        "config:js-app",
+        "group:allNonMajor",
+        ":separateMultipleMajorReleases",
+        ":automergeMinor",
+        ":automergeBranch",
+        ":automergeRequireAllStatusChecks",
+        ":automergeLinters",
+        ":automergeTesters",
+        ":automergeTypes",
+        ":bumpVersion(patch)"
+    ],
+    "packageRules": [
+        {
+            "extends": "packages:googleapis",
+            "groupName": "googleapis packages"
+        },
+        {
+            "extends": "packages:linters",
+            "groupName": "linters"
+        },
+        {
+            "packagePatterns": ["eslint"],
+            "labels": ["linting"]
+        },
+        {
+            "depTypeList": ["optionalDependencies"],
+            "addLabels": ["optional"]
+        }
+    ],
+    "lockFileMaintenance": {
+        "enabled": true,
+        "automerge": true
+    }
 }
