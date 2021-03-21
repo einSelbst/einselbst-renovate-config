@@ -3,6 +3,9 @@
   "extends": [
     "config:js-app",
     "group:allNonMajor",
+    "packages:linters",
+    "packages:test",
+    "packages:googleapis",
     ":separateMultipleMajorReleases",
     ":automergeMinor",
     ":automergeBranch",
@@ -12,28 +15,29 @@
     ":automergeTypes",
     ":pinSkipCi",
     ":enableVulnerabilityAlertsWithLabel(security)",
-    ":labels(dependencies,maintenance-bot)"
+    ":labels(dependencies,maintenance-bot,renovate)"
+  ],
+  "schedule": [
+    "on tuesday and thursday",
+    "every weekend"
+  ],
+  "labels": [
+    "dependencies",
+    "renovate",
+    "foobar"
   ],
   "packageRules": [
-    {
-      "extends": "packages:googleapis",
-      "groupName": "googleapis packages"
-    },
-    {
-      "extends": "packages:linters",
-      "groupName": "linters"
-    },
     {
       "packagePatterns": ["eslint"],
       "labels": ["linting"]
     },
     {
+      "matchPackagePatterns": ["next", "react"],
+      "labels": ["core-deps"]
+    },
+    {
       "depTypeList": ["optionalDependencies"],
       "addLabels": ["optional"]
     }
-  ],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true
-  }
+  ]
 }
