@@ -14,8 +14,7 @@
     ":automergeTesters",
     ":automergeTypes",
     ":pinSkipCi",
-    ":enableVulnerabilityAlertsWithLabel(security)",
-    ":labels(dependencies,maintenance-bot,renovate)"
+    ":enableVulnerabilityAlertsWithLabel(security)"
   ],
   "schedule": [
     "on tuesday and thursday",
@@ -23,8 +22,7 @@
   ],
   "labels": [
     "dependencies",
-    "renovate",
-    "foobar"
+    "renovate"
   ],
   "packageRules": [
     {
