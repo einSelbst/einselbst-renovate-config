@@ -16,6 +16,7 @@
     ":pinSkipCi",
     ":enableVulnerabilityAlertsWithLabel(security)"
   ],
+  "masterIssue": true,
   "schedule": [
     "on tuesday and thursday",
     "every weekend"
@@ -32,6 +33,12 @@
     {
       "matchPackagePatterns": ["next", "react"],
       "labels": ["core-deps"]
+    },
+    {
+      "matchPackagePatterns": ["next", "react"],
+      "major": {
+        "masterIssueApproval": true
+      }
     },
     {
       "depTypeList": ["optionalDependencies"],
