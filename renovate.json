@@ -17,10 +17,6 @@
     ":enableVulnerabilityAlertsWithLabel(security)"
   ],
   "masterIssue": true,
-  "schedule": [
-    "on tuesday and thursday",
-    "every weekend"
-  ],
   "labels": [
     "dependencies",
     "renovate"
