@@ -16,6 +16,7 @@
     ":pinSkipCi",
     ":enableVulnerabilityAlertsWithLabel(security)"
   ],
+  "automergeType": "pr",
   "masterIssue": true,
   "labels": [
     "dependencies",
