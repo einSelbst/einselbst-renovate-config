@@ -3,9 +3,8 @@
   "extends": [
     "config:js-app",
     "group:allNonMajor",
-    "packages:linters",
-    "packages:test",
-    "packages:googleapis",
+    "group:linters",
+    "group:test",
     ":separateMultipleMajorReleases",
     ":automergeMinor",
     ":automergeBranch",
@@ -29,10 +28,7 @@
     },
     {
       "matchPackagePatterns": ["next", "react"],
-      "labels": ["core-deps"]
-    },
-    {
-      "matchPackagePatterns": ["next", "react"],
+      "labels": ["core-deps"],
       "major": {
         "masterIssueApproval": true
       }
@@ -40,6 +36,10 @@
     {
       "depTypeList": ["optionalDependencies"],
       "addLabels": ["optional"]
+    },
+    {
+      "matchPackageNames": ["eslint-plugin-json-schema-validator"],
+      "prPriority": -2
     }
   ]
 }
