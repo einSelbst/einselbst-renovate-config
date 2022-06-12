@@ -1,91 +1,90 @@
 {
-  "$schema": "https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/renovate.json",
-  "extends": [
-    "config:js-app",
-    ":separateMultipleMajorReleases",
-    ":automergeMinor",
-    ":automergeBranch",
-    ":automergeRequireAllStatusChecks",
-    ":automergeTypes",
-    ":pinSkipCi",
-    ":enableVulnerabilityAlertsWithLabel(security)"
-  ],
-  "automergeType": "pr",
-  "masterIssue": true,
-  "rebaseWhen": "behind-base-branch",
-  "labels": [
-    "dependencies",
-    "renovate"
-  ],
-  {
+    "$schema": "https://github.com/SchemaStore/schemastore/raw/master/src/schemas/json/renovate.json",
+    "extends": [
+        "config:js-app",
+        ":separateMultipleMajorReleases",
+        ":automergeMinor",
+        ":automergeBranch",
+        ":automergeRequireAllStatusChecks",
+        ":automergeTypes",
+        ":pinSkipCi",
+        ":enableVulnerabilityAlertsWithLabel(security)"
+    ],
+    "automergeType": "pr",
+    "masterIssue": true,
+    "rebaseWhen": "behind-base-branch",
+    "labels": [
+        "dependencies",
+        "renovate"
+    ],
     "lockFileMaintenance": {
-      "enabled": true,
-      "extends": [
-        "schedule:weekly"
-      ]
+        "enabled": true,
+        "extends": [
+            "schedule:weekly"
+        ]
     }
-  },
-  "packageRules": [
-    {
-      "matchDepTypes": [
-        "dependencies"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "groupName": "production non-major dependencies",
-      "groupSlug": "prod-minor-patch"
-    },
-    {
-      "matchDepTypes": [
-        "devDependencies"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "groupName": "development non-major dependencies",
-      "groupSlug": "dev-minor-patch"
-    },
-    {
-      "extends": "packages:test",
-      "matchPackagePatterns": "cypress",
-      "matchPackageNames": "start-server-and-test",
-      "groupName": "test packages",
-      "automerge": true,
-      "groupSlug": "testing-libs-patch"
-    },
-    {
-      "extends": "packages:linters",
-      "matchPackagePatterns": [
-        "textlint",
-        "prettier"
-      ],
-      "matchPackageNames": [
-        "html-validate"
-      ],
-      "groupName": "linters",
-      "automerge": true,
-      "labels": ["linter"]
-    },
-    {
-      "matchDepTypes": [
-        "dependencies"
-      ],
-      "matchPackagePatterns": ["^next", "^@next"],
-      "groupName": ["next"]
-    },
-    {
-      "matchPackagePatterns": ["next", "react"],
-      "labels": ["core-deps"],
-      "major": {
-        "masterIssueApproval": true
-      }
-    },
-    {
-      "matchPackageNames": ["eslint-plugin-json-schema-validator"],
-      "prPriority": -2
-    }
-  ]
+    ,
+    "packageRules": [
+        {
+            "matchDepTypes": [
+                "dependencies"
+            ],
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ],
+            "groupName": "production non-major dependencies",
+            "groupSlug": "prod-minor-patch"
+        },
+        {
+            "matchDepTypes": [
+                "devDependencies"
+            ],
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ],
+            "groupName": "development non-major dependencies",
+            "groupSlug": "dev-minor-patch"
+        },
+        {
+            "extends": "packages:test",
+            "matchPackagePatterns": "cypress",
+            "matchPackageNames": "start-server-and-test",
+            "groupName": "test packages",
+            "automerge": true,
+            "groupSlug": "testing-libs-patch"
+        },
+        {
+            "extends": "packages:linters",
+            "matchPackagePatterns": [
+                "textlint",
+                "prettier"
+            ],
+            "matchPackageNames": [
+                "html-validate"
+            ],
+            "groupName": "linters",
+            "automerge": true,
+            "labels": ["linter"]
+        },
+        {
+            "matchDepTypes": [
+                "dependencies"
+            ],
+            "matchPackagePatterns": ["^next", "^@next"],
+            "groupName": ["next"]
+        },
+        {
+            "matchPackagePatterns": ["next", "react"],
+            "labels": ["core-deps"],
+            "major": {
+                "masterIssueApproval": true
+            }
+        },
+        {
+            "matchPackageNames": ["eslint-plugin-json-schema-validator"],
+            "prPriority": -2
+        }
+    ]
 }
