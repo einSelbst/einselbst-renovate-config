@@ -1,0 +1,15 @@
+{
+    "name": "einselbst-renovate-config",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "lint": "renovate-config-validator --github-token-warn=false"
+    },
+    "dependencies": {
+        "renovate": "latest"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
