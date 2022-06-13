@@ -4,7 +4,7 @@ specifiers:
   renovate: latest
 
 dependencies:
-  renovate: 32.83.2
+  renovate: 32.83.3
 
 packages:
 
@@ -2006,7 +2006,7 @@ packages:
     dev: false
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: false
 
   /console-control-strings/1.1.0:
@@ -2567,7 +2567,7 @@ packages:
     dev: false
 
   /github-url-from-git/1.5.0:
-    resolution: {integrity: sha1-+YX+3MCpqledyI16/waNVcxiUaA=}
+    resolution: {integrity: sha512-WWOec4aRI7YAykQ9+BHmzjyNlkfJFG8QLXnDTsLz/kZefq7qkzdfo4p6fkYYMIq1aj+gZcQs/1HQhQh3DPPxlQ==}
     dev: false
 
   /glob-parent/5.1.2:
@@ -3165,7 +3165,7 @@ packages:
     dev: false
 
   /lie/3.1.1:
-    resolution: {integrity: sha1-mkNrLMd0bKWd56QfpGmz77dr2H4=}
+    resolution: {integrity: sha512-RiNhHysUjhrDQntfYSfY4MU24coXXdEOgw9WGcKHNeEwffDYbF//u87M1EWaMGzuFoSbqW0C9C6lEEhDOAswfw==}
     dependencies:
       immediate: 3.0.6
     dev: false
@@ -4098,8 +4098,8 @@ packages:
       - supports-color
     dev: false
 
-  /renovate/32.83.2:
-    resolution: {integrity: sha512-tT6djsuPVl6mbvD/hGWN4Fv2guzEaIMeiVi9IkIYZlDxsAedse/ho6cS5hepMG14qdNyD68P5tW84L6u+nD4Ow==}
+  /renovate/32.83.3:
+    resolution: {integrity: sha512-NMrJ/FfJ6k2hVnkz+B3WJTbxX17RY7wjbqmPR+SIteHcuB1qm0J8J48J3dr9RwgUEzn2mA0OR6WNO4UbwqEanw==}
     engines: {node: ^14.15.0 || >=16.13.0, yarn: ^1.17.0}
     hasBin: true
     dependencies:
@@ -4621,7 +4621,7 @@ packages:
     dev: false
 
   /traverse/0.6.6:
-    resolution: {integrity: sha1-y99WD9e5r2MlAv7UD5GMFX6pcTc=}
+    resolution: {integrity: sha512-kdf4JKs8lbARxWdp7RKdNzoJBhGUcIalSYibuGyHJbmk40pOysQ0+QPvlkCOICOivDWU2IJo2rkrxyTK2AH4fw==}
     dev: false
 
   /treeify/1.1.0:
