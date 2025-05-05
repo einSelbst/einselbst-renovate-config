@@ -50,7 +50,7 @@
         {
             "extends": "packages:test",
             "matchPackagePatterns": "cypress",
-            "matchPackageNames": "start-server-and-test",
+            "matchPackageNames": ["start-server-and-test"],
             "groupName": "test packages",
             "automerge": true,
             "groupSlug": "testing-libs-patch"

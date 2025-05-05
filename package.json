@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "lint": "renovate-config-validator --github-token-warn=false"
+        "lint": "renovate-config-validator"
     },
     "dependencies": {
         "renovate": "latest"
